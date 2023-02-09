@@ -59,14 +59,18 @@
         background.appendChild(food);
         food.addEventListener("click", () => {
           background.removeChild(food);
-          pet.style.width = (pet.offsetWidth + 10) + "px";
-          pet.style.height = (pet.offsetHeight + 10) + "px";
+          pet.style.width = (pet.offsetWidth + 5) + "px";
+          pet.style.height = (pet.offsetHeight + 5) + "px";
           scoreCount++;
           document.getElementById("score").innerHTML = scoreCount;
           if (scoreCount === 80) {
+            pet.style.width = "100px";
+            pet.style.height = "100px";
             pet.style.backgroundImage = "url('https://media.discordapp.net/attachments/1068496153722748941/1068889571783344178/24238e44f611ac63.png')";
           }
           if (scoreCount === 30) {
+            pet.style.width = "80px";
+            pet.style.height = "80px";
             pet.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1068496153722748941/1068527724236374097/qhclshzh.png')";
           }
         });
